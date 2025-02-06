@@ -40,5 +40,11 @@ function initializeGame() {
         clearMessage.style.display = 'block';
         detective.style.display = 'none';
     });
+
+    // クリックイベント - 偽物画像をクリックでメッセージ表示
+    dummy.addEventListener('click', () => {
+        alert('偽物です 探偵に慣れないよぉ？笑');
+    });
 }
+
 window.addEventListener('load', initializeGame);
