@@ -7,8 +7,8 @@ function initializeGame() {
 
     // 背景画像リストと対応する座標
     const backgrounds = [
-        { src: "./assets/images/2.png", x: 300, y: 400 },
-        { src: "./assets/images/3.png", x: 400, y: 500 }
+        { src: "./assets/images/2.png", x: 500, y: 650 },
+        { src: "./assets/images/3.png", x: 1759, y: 360}
     ];
 
     // 偽物画像リスト
