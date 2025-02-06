@@ -10,7 +10,8 @@ function initializeGame() {
         { src: "./assets/images/2.png", x: 500, y: 650 },
         { src: "./assets/images/3.png", x: 1759, y: 395},
         { src: "./assets/images/Renoir.jpg", x: 420, y: 140},
-        { src: "./assets/images/Napoleon.jpg", x: 100, y: 960}
+        { src: "./assets/images/Napoleon.jpg", x: 100, y: 960},
+        { src: "./assets/images/ロンドン.png", x: 1450, y: 960}
 
     ];
 
