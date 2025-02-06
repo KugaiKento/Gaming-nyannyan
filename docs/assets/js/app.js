@@ -4,31 +4,23 @@ function initializeGame() {
     const clearMessage = document.getElementById('clear-message');
     const background = document.getElementById('background');
 
-    // 背景画像リスト（好きなように追加）
+    // 背景画像リスト
     const backgrounds = [
         "./assets/images/2.png",
-        "./assets/images/3.png",
-        // "./assets/images/4.png", // 追加可能
+        // "./assets/images/3.png",
     ];
 
-    // ランダムで1つ選択
+    // ランダムで背景画像を設定
     const randomIndex = Math.floor(Math.random() * backgrounds.length);
     background.src = backgrounds[randomIndex];
 
-    // 画面サイズ取得
-    const windowWidth = container.clientWidth;
-    const windowHeight = container.clientHeight;
+    // 赤枠の絶対座標（調整してください）
+    const fixedX = 300; // 赤枠のX座標
+    const fixedY = 400; // 赤枠のY座標
 
-    // 下半分のランダムな位置に配置
-    const maxX = windowWidth - 5;
-    const minY = windowHeight / 2;
-    const maxY = windowHeight - 5;
-
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * (maxY - minY)) + minY;
-
-    detective.style.left = `${randomX}px`;
-    detective.style.top = `${randomY}px`;
+    // 要素の位置を絶対座標で固定
+    detective.style.left = `${fixedX}px`;
+    detective.style.top = `${fixedY}px`;
 
     // クリックイベント
     detective.addEventListener('click', () => {
