@@ -41,8 +41,8 @@ body {
 
 .dummy {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 1.6em;
+    height: 1.6em;
     cursor: pointer;
     z-index: 2;
     opacity: 0.5;
