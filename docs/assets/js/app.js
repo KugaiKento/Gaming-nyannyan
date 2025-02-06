@@ -67,6 +67,8 @@ function initializeGame() {
     dummy.addEventListener('click', () => {
         alert('偽物です 探偵になれないよぉ？笑');
     });
+    console.log("開発者モードでかつコンソールを覗きましたね...");
+    console.log("これは、探偵になれません");
 }
 
 window.addEventListener('load', initializeGame);
