@@ -8,13 +8,15 @@ function initializeGame() {
     // 背景画像リストと対応する座標
     const backgrounds = [
         { src: "./assets/images/2.png", x: 500, y: 650 },
-        { src: "./assets/images/3.png", x: 1759, y: 360}
+        { src: "./assets/images/3.png", x: 1759, y: 395},
+        { src: "./assets/images/Renoir.jpg", x: 420, y: 140}
     ];
 
     // 偽物画像リスト
     const dummyImages = [
         "./assets/images/だまし1.png",
         "./assets/images/だまし2.png",
+        "./assets/images/Renoir.jpg",
         // "./assets/images/fake3.png"
     ];
 
