@@ -38,3 +38,13 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
+.dummy {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.5;
+    display: none; /* 初期は非表示 */
+}

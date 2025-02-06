@@ -3,11 +3,19 @@ function initializeGame() {
     const container = document.getElementById('game-container');
     const clearMessage = document.getElementById('clear-message');
     const background = document.getElementById('background');
+    const dummy = document.querySelector('.dummy');
 
     // 背景画像リストと対応する座標
     const backgrounds = [
         { src: "./assets/images/2.png", x: 300, y: 400 },
         { src: "./assets/images/3.png", x: 400, y: 500 }
+    ];
+
+    // 偽物画像リスト
+    const dummyImages = [
+        "./assets/images/だまし1.png",
+        "./assets/images/だまし2.png",
+        // "./assets/images/fake3.png"
     ];
 
     // ランダムで背景画像を設定
@@ -16,16 +24,21 @@ function initializeGame() {
     
     background.src = selectedBackground.src;
 
-    // 赤枠の座標を背景画像に応じて設定
+    // 探偵の位置を設定
     detective.style.left = `${selectedBackground.x}px`;
     detective.style.top = `${selectedBackground.y}px`;
 
-    // クリックイベント
+    // 偽物画像をランダムで選び、ランダムな位置に配置
+    const randomDummyImage = dummyImages[Math.floor(Math.random() * dummyImages.length)];
+    dummy.src = randomDummyImage;
+    dummy.style.left = `${Math.random() * (container.clientWidth - 15)}px`;
+    dummy.style.top = `${Math.random() * (container.clientHeight - 15)}px`;
+    dummy.style.display = 'block';
+
+    // クリックイベント - 探偵をクリックでクリア
     detective.addEventListener('click', () => {
         clearMessage.style.display = 'block';
         detective.style.display = 'none';
     });
 }
-
-// ゲーム初期化
 window.addEventListener('load', initializeGame);
