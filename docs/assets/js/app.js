@@ -4,38 +4,39 @@ function initializeGame() {
     const clearMessage = document.getElementById('clear-message');
     const background = document.getElementById('background');
 
-    // 背景画像リスト（好きなように追加）
+    // Background image list
     const backgrounds = [
         "./assets/images/2.png",
-        "./assets/images/3.png",
-        // "./assets/images/4.png", // 追加可能
+        // "./assets/images/3.png",
     ];
 
-    // ランダムで1つ選択
+    // Select a random background
     const randomIndex = Math.floor(Math.random() * backgrounds.length);
     background.src = backgrounds[randomIndex];
 
-    // 画面サイズ取得
+    // Get window dimensions
     const windowWidth = container.clientWidth;
     const windowHeight = container.clientHeight;
 
-    // 下半分のランダムな位置に配置
-    const maxX = windowWidth - 5;
-    const minY = windowHeight / 2;
-    const maxY = windowHeight - 5;
+    // Coordinates for the red-circled area
+    const redCircleX = 300; // Adjust based on the red circle in the image
+    const redCircleY = 400; // Adjust based on the red circle in the image
+    const redCircleWidth = 100; // Approximate width of the circle area
+    const redCircleHeight = 50; // Approximate height of the circle area
 
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * (maxY - minY)) + minY;
+    // Randomize position within the red circle area
+    const randomX = redCircleX + Math.random() * redCircleWidth;
+    const randomY = redCircleY + Math.random() * redCircleHeight;
 
     detective.style.left = `${randomX}px`;
     detective.style.top = `${randomY}px`;
 
-    // クリックイベント
+    // Click event for the detective
     detective.addEventListener('click', () => {
         clearMessage.style.display = 'block';
         detective.style.display = 'none';
     });
 }
 
-// ゲーム初期化
+// Initialize the game on window load
 window.addEventListener('load', initializeGame);
