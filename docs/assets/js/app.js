@@ -13,7 +13,9 @@ function initializeGame() {
         { src: "./assets/images/Napoleon.jpg", x: 100, y: 960},
         { src: "./assets/images/ロンドン.png", x: 1450, y: 960},
         { src: "./assets/images/bansan.jpg", x: 950, y: 720},
-        { src: "./assets/images/背景5.png", x: 950, y: 720}
+        { src: "./assets/images/背景5.png", x: 950, y: 720},
+        { src: "./assets/images/くが.jpg", x: 470, y: 300},
+        { src: "./assets/images/atene.jpg", x: 400, y: 720}
 
     ];
 
