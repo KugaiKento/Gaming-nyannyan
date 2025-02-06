@@ -15,8 +15,7 @@ function initializeGame() {
     // 偽物画像リスト
     const dummyImages = [
         "./assets/images/だまし1.png",
-        "./assets/images/だまし2.png",
-        "./assets/images/Renoir.jpg",
+        "./assets/images/だまし2.png"
         // "./assets/images/fake3.png"
     ];
 
