@@ -2,6 +2,18 @@ function initializeGame() {
     const detective = document.querySelector('.detective');
     const container = document.getElementById('game-container');
     const clearMessage = document.getElementById('clear-message');
+    const background = document.getElementById('background');
+
+    // 背景画像リスト（好きなように追加）
+    const backgrounds = [
+        "./assets/images/2.png",
+        "./assets/images/3.png",
+        // "./assets/images/4.png", // 追加可能
+    ];
+
+    // ランダムで1つ選択
+    const randomIndex = Math.floor(Math.random() * backgrounds.length);
+    background.src = backgrounds[randomIndex];
 
     // 画面サイズ取得
     const windowWidth = container.clientWidth;

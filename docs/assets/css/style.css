@@ -13,6 +13,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position:center
 }
 
 .detective {
@@ -21,6 +22,7 @@ body {
     height: 5px;
     cursor: pointer;
     z-index: 2;
+    opacity: .5;
 }
 
 #clear-message {
