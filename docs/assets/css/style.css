@@ -18,8 +18,8 @@ body {
 
 .detective {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 1.3em;
+    height: 1.3em;
     cursor: pointer;
     z-index: 2;
     opacity: .5;
