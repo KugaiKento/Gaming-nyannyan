@@ -4,23 +4,21 @@ function initializeGame() {
     const clearMessage = document.getElementById('clear-message');
     const background = document.getElementById('background');
 
-    // 背景画像リスト
+    // 背景画像リストと対応する座標
     const backgrounds = [
-        "./assets/images/2.png",
-        // "./assets/images/3.png",
+        { src: "./assets/images/2.png", x: 300, y: 400 },
+        { src: "./assets/images/3.png", x: 400, y: 500 }
     ];
 
     // ランダムで背景画像を設定
     const randomIndex = Math.floor(Math.random() * backgrounds.length);
-    background.src = backgrounds[randomIndex];
+    const selectedBackground = backgrounds[randomIndex];
+    
+    background.src = selectedBackground.src;
 
-    // 赤枠の絶対座標（調整してください）
-    const fixedX = 300; // 赤枠のX座標
-    const fixedY = 400; // 赤枠のY座標
-
-    // 要素の位置を絶対座標で固定
-    detective.style.left = `${fixedX}px`;
-    detective.style.top = `${fixedY}px`;
+    // 赤枠の座標を背景画像に応じて設定
+    detective.style.left = `${selectedBackground.x}px`;
+    detective.style.top = `${selectedBackground.y}px`;
 
     // クリックイベント
     detective.addEventListener('click', () => {
