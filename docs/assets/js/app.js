@@ -61,7 +61,7 @@ function initializeGame() {
 
     // クリックイベント - 偽物画像をクリックでメッセージ表示
     dummy.addEventListener('click', () => {
-        alert('偽物です 探偵に慣れないよぉ？笑');
+        alert('偽物です 探偵になれないよぉ？笑');
     });
 }
 
