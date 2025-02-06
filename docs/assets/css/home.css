@@ -21,3 +21,7 @@ body {
   width: 20em;
   margin: 5rem;
 }
+
+.explanation-text{
+  text-align: center;
+}
