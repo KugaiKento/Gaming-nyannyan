@@ -23,7 +23,7 @@ body {
     height: 1.3em;
     cursor: pointer;
     z-index: 2;
-    opacity: .5;
+    opacity: .4;
 }
 
 #clear-message {
