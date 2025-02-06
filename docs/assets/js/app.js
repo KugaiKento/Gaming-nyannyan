@@ -61,6 +61,11 @@ function initializeGame() {
     detective.addEventListener('click', () => {
         clearMessage.style.display = 'block';
         detective.style.display = 'none';
+        
+        //５秒後にリロード
+        setTimeout(function() {
+            location.reload();
+        }, 5000); 
     });
 
     // クリックイベント - 偽物画像をクリックでメッセージ表示
